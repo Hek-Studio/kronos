@@ -2,6 +2,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/archlinuxpackages,linux,macos,node,nuxtjs,sublimetext,vim,visualstudiocode,vue,vuejs,windows,yarn
 # Edit at https://www.toptal.com/developers/gitignore?templates=archlinuxpackages,linux,macos,node,nuxtjs,sublimetext,vim,visualstudiocode,vue,vuejs,windows,yarn
 
+### Custom rules ###
+local.db
+
+
 ### ArchLinuxPackages ###
 *.tar
 *.tar.*

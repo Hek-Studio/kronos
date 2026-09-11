@@ -13,6 +13,7 @@ export const relations = defineRelations(schema, (r) => ({
       to: r.users.id,
     }),
     members: r.many.workspaceMembers(),
+    projects: r.many.projects(),
   },
 
   workspaceMembers: {
@@ -24,5 +25,24 @@ export const relations = defineRelations(schema, (r) => ({
       from: r.workspaceMembers.workspaceId,
       to: r.workspaces.id,
     }),
+  },
+
+  projects: {
+    workspace: r.one.workspaces({
+      from: r.projects.workspaceId,
+      to: r.workspaces.id,
+    }),
+    task: r.many.tasks(),
+  },
+
+  tasks: {
+    project: r.one.projects({
+      from: r.tasks.projectId,
+      to: r.projects.id,
+    }),
+    assignee: r.one.users({
+      from: r.tasks.assigneeId,
+      to: r.users.id,
+    })
   },
 }));

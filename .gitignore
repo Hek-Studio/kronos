@@ -4,6 +4,7 @@
 
 ### Custom rules ###
 local.db
+kronos.db
 
 
 ### ArchLinuxPackages ###
